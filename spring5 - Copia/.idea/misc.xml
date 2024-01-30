@@ -5,7 +5,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/spring5/pom.xml" />
+        <option value="$PROJECT_DIR$/prova/pom.xml" />
+        <option value="$PROJECT_DIR$/pet-clinic/pet-clinic-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../sfg-pet-clinic/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/pet-clinic/pet-clinic-web/pom.xml" />
+      </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
