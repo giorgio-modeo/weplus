@@ -12,7 +12,7 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <packaging>pom</packaging>
     <name>sfg-pet-clinic</name>
     <description>Demo project for Spring Boot</description>
