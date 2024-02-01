@@ -1,14 +1,17 @@
 package services.map;
 
 import model.Owner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 import services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Owner save(Owner object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
