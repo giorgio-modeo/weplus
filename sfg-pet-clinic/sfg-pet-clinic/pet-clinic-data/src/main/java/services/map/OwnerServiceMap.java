@@ -1,7 +1,6 @@
 package services.map;
 
 import model.Owner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import services.OwnerService;
 

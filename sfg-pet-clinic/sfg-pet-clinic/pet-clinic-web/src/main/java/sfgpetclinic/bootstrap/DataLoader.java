@@ -2,6 +2,7 @@ package sfgpetclinic.bootstrap;
 
 import model.Owner;
 import model.Vet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import services.OwnerService;
@@ -15,9 +16,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    @Autowired
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -48,7 +50,6 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
         System.out.println("Loaded vets...");
 
-//        find all owners
         ownerService.findAll().forEach(owner -> System.out.println(owner.getName()));
 
     }
