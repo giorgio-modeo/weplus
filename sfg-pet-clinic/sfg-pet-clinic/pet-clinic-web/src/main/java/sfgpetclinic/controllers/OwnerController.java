@@ -24,4 +24,9 @@ public class OwnerController {
         ownerService.findAll().forEach(owner -> System.out.println(owner.getName()));
         return "owners/index";
     }
+
+    @RequestMapping("/find")
+    public String findOwners() {
+        return "notimplemented";
+    }
 }

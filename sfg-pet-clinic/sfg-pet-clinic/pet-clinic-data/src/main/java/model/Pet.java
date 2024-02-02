@@ -1,12 +1,34 @@
 package model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
+@Entity
 public class Pet extends BaseEntity{
-private PetType petType;
-private Owner owner;
-private LocalDate birthDate;
-private String name;
+    @Column(name = "name")
+    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits;
+    public Set<Visit> getVisits() {
+        return visits;
+    }
+
+    public void setVisits(Set<Visit> visits) {
+        this.visits = visits;
+    }
+
+
 
     public String getName() {
         return name;
