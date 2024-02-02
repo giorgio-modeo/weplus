@@ -2,7 +2,6 @@ package services.map;
 
 import model.Vet;
 import org.springframework.stereotype.Service;
-import services.CrudService;
 import services.VetService;
 
 import java.util.Set;

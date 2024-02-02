@@ -8,12 +8,8 @@ import services.OwnerService;
 import services.PetTypeService;
 import services.SpecialityService;
 import services.VetService;
-import services.map.OwnerServiceMap;
-import services.map.VetServiceMap;
 
 import java.time.LocalDate;
-
-import static net.sf.jsqlparser.parser.CCJSqlParserConstants.Lo;
 
 
 @Component
