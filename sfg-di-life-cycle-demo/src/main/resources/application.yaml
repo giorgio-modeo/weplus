@@ -1,0 +1,21 @@
+spring:
+    profiles:
+#      active: dev oppure prod oppure qa oppure ecc...
+        active:
+          -  cat
+          -  EN
+          -  prod
+
+guru:
+    username: ymlusername
+    password: ymlpassword
+    jdbcurl: ymljdbcurl
+#    i tre --- sono per fare un nuovo file di configurazione
+---
+spring:
+    profiles: prod
+guru:
+    username: ymlProdUsername
+    password: ymlProdPassword
+    jdbcurl: ymlProdJdbcurl
+
