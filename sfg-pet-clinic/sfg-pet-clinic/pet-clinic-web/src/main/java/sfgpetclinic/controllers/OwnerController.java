@@ -14,9 +14,10 @@ import java.util.Set;
 @Controller
 public class OwnerController {
     private final OwnerService ownerService;
-    public OwnerController() {
-        this.ownerService = new OwnerServiceMap();
+    public OwnerController(OwnerService ownerService) {
+        this.ownerService = ownerService;
     }
+
     @RequestMapping({"","/", "/index", "/index.html"})
     public String listOwners(Model model) {
         model.addAttribute("owners", ownerService.findAll());
