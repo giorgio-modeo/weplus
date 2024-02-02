@@ -9,9 +9,22 @@ import java.util.Set;
 
 @Service
 public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
+    private final SpecialityServiceMap specialityService;
+
+    public VetServiceMap(SpecialityServiceMap specialityService) {
+        this.specialityService = specialityService;
+    }
+
 
     @Override
     public Vet save(Vet object) {
+        if (!object.getSpecialities().isEmpty()) {
+            object.getSpecialities().forEach(speciality -> {
+                if (speciality.getId() == null) {
+                    speciality.setId(specialityService.save(speciality).getId());
+                }
+            });
+        }
         return super.save(object);
     }
 
