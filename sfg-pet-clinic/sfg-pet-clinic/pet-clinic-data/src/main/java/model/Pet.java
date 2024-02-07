@@ -14,7 +14,6 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 public class Pet extends BaseEntity{
-
     @Builder
     public Pet(Long id, String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
         super(id);
