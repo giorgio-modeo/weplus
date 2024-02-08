@@ -5,9 +5,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/sfg-pet-clinic/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectResources">
+    <resource url="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/failsafe-summary.xsd" location="$PROJECT_DIR$/target/failsafe-reports/failsafe-summary.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
